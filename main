@@ -1,0 +1,116 @@
+from tkinter import *
+import time
+import pyqrcode
+
+def gen_qr():
+    global qr,img
+    qr = pyqrcode.QRCode(con.get())
+    qr_xbm = qr.xbm(scale=10)
+    img = BitmapImage(data= qr_xbm,background='white',foreground='black')
+    l4.config(image=img)
+
+def save():
+    gen_qr()
+    tme=time.time()
+    qr.png(f'{time}.png',scale=8)
+    con.set('')
+
+root = Tk()
+root.title('QR Code Gen')	
+root.geometry('650x550')
+# root.resizable(0,0)
+root.configure(bg='#333333')
+
+
+con = StringVar()
+
+
+f1=Frame(root,width=10,height=15,bg='#333333')
+f1.pack()
+f2=Frame(root,width=10,height=25,bg='#333333')
+f2.pack()
+f3=Frame(root,width=10,height=25,bg='#333333')
+f3.pack()
+
+l1 = Label(f1,text='WELCOME TO GUI',pady=10,font=('Arial', 30, 'bold'),bg='#333333',fg='#ffffff')
+l1.grid(row=0,column=2,columnspan=3,padx=5,pady=10)
+l2 = Labefrom tkinter import *
+import time
+import pyqrcode
+
+def gen_qr():
+    global qr,img
+    qr = pyqrcode.QRCode(con.get())
+    qr_xbm = qr.xbm(scale=10)
+    img = BitmapImage(data= qr_xbm,background='white',foreground='black')
+    l4.config(image=img)
+
+def save():
+    gen_qr()
+    tme=time.time()
+    qr.png(f'{time}.png',scale=8)
+    con.set('')
+
+root = Tk()
+root.title('QR Code Gen')	
+root.geometry('650x550')
+# root.resizable(0,0)
+root.configure(bg='#333333')
+
+
+con = StringVar()
+
+
+f1=Frame(root,width=10,height=15,bg='#333333')
+f1.pack()
+f2=Frame(root,width=10,height=25,bg='#333333')
+f2.pack()
+f3=Frame(root,width=10,height=25,bg='#333333')
+f3.pack()
+
+l1 = Label(f1,text='WELCOME TO GUI',pady=10,font=('Arial', 30, 'bold'),bg='#333333',fg='#ffffff')
+l1.grid(row=0,column=2,columnspan=3,padx=5,pady=10)
+l2 = Label(f1,text='BY PRATEEK',pady=5,font=('SugarFont Bold', 10, 'bold'),bg='#333333',fg='#ffffff')
+l2.grid(row=0,column=5,sticky='w',pady=60)
+l3 = Label(f2,text='ENTER CONTENT',font=('SugarFont Bold', 8, 'bold'),bg='#333333',fg='#ffffff')
+l3.grid(row=0,column=0,padx=10)
+
+e1 = Entry(f2,textvariable=con,width=45)
+e1.grid(row=0,column=1,padx=10)
+
+b1=Button(f2,text='Generate',command=gen_qr,bg='#ff3399',fg='#ffffff')
+b1.grid(row=1,column=0,padx=10,pady=30)
+
+b2=Button(f2,text='Submit',command=save,bg='#ff3399',fg='#ffffff')
+b2.grid(row=1,column=1,padx=50,pady=30)
+
+
+l4=Label(f3,pady=5,bg="#ffffff")
+l4.pack()
+
+root.mainloop()
+
+
+
+l(f1,text='BY PRATEEK',pady=5,font=('SugarFont Bold', 10, 'bold'),bg='#333333',fg='#ffffff')
+l2.grid(row=0,column=5,sticky='w',pady=60)
+l3 = Label(f2,text='ENTER CONTENT',font=('SugarFont Bold', 8, 'bold'),bg='#333333',fg='#ffffff')
+l3.grid(row=0,column=0,padx=10)
+
+e1 = Entry(f2,textvariable=con,width=45)
+e1.grid(row=0,column=1,padx=10)
+
+b1=Button(f2,text='Generate',command=gen_qr,bg='#ff3399',fg='#ffffff')
+b1.grid(row=1,column=0,padx=10,pady=30)
+
+b2=Button(f2,text='Submit',command=save,bg='#ff3399',fg='#ffffff')
+b2.grid(row=1,column=1,padx=50,pady=30)
+
+
+l4=Label(f3,pady=5,bg="#ffffff")
+l4.pack()
+
+root.mainloop()
+
+
+
